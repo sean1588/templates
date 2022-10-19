@@ -3,36 +3,7 @@
         {
             "name": "Static Website",
             "slug": "static-website",
-            "groups": [
-                {
-                    "name": "AWS Static Website",
-                    "kind": "architecture",
-                    "parent": "static-website",
-                    "slug": "aws",
-                    "clouds": [
-                        "aws"
-                    ],
-                    "templates": [
-                        "static-website-aws-typescript",
-                        "static-website-aws-python",
-                        "static-website-aws-go",
-                        "static-website-aws-csharp",
-                        "static-website-aws-yaml"
-                    ]
-                },
-                {
-                    "name": "Azure Static Website",
-                    "kind": "architecture",
-                    "parent": "static-website",
-                    "slug": "azure",
-                    "clouds": [
-                        "azure"
-                    ],
-                    "templates": [
-                        "static-website-azure-typescript",
-                        "static-website-azure-python",
-                        "static-website-azure-go",
-                        "static-website-azure-csharp",
+            atic-website-azure-csharp",
                         "static-website-azure-yaml"
                     ]
                 },
