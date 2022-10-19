@@ -164,7 +164,7 @@
             "name": "alicloud-go",
             "runtime": "go",
             "template": {
-                "description": "A minimal asfslfj AliCloud Go Pulumi program",
+                "description": "A test minimal AliCloud Go Pulumi program",
                 "config": {
                     "alicloud:region": {
                         "description": "The AliCloud region to deploy into",
