@@ -77,6 +77,28 @@
             ]
         },
         {
+            "name": "Container Service",
+            "slug": "container-service",
+            "groups": [
+                {
+                    "name": "Container Service on AWS",
+                    "kind": "architecture",
+                    "parent": "container-service",
+                    "slug": "aws",
+                    "clouds": [
+                        "aws"
+                    ],
+                    "templates": [
+                        "container-aws-typescript",
+                        "container-aws-python",
+                        "container-aws-go",
+                        "container-aws-csharp",
+                        "container-aws-yaml"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Kubernetes",
             "slug": "kubernetes",
             "groups": [
