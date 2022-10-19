@@ -20,12 +20,9 @@ jobs:
       - name: Build metadata
         run: |
           make metadata
-          git add metadata.json
-          git commit -m "update metadata.json"
-          git push 
-      # - name: Commit metadata.json file
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     file_pattern: metadata.json
-      #     commit_message: update metadata.json
+      - name: Commit metadata.json file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: metadata.json
+          commit_message: update metadata.json
   
