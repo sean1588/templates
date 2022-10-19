@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: "16.x"
       - name: Check out branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Build metadata
@@ -23,6 +23,6 @@ jobs:
       - name: Commit metadata.json file
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: "dist/"
+          file_pattern: "dist/metadata.json"
           commit_message: update metadata.json
   
