@@ -6,7 +6,7 @@ on:
 
 jobs:
   make_metadata:
-    if: github.event.pull_request.head.repo.full_name != github.repository
+    # if: github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
     steps:
       - name: Install Node
@@ -20,9 +20,12 @@ jobs:
       - name: Build metadata
         run: |
           make metadata
-      - name: Commit metadata.json file
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: metadata.json
-          commit_message: update metadata.json
+          git add metadata.json
+          git commit -m "update metadata.json"
+          git push 
+      # - name: Commit metadata.json file
+      #   uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     file_pattern: metadata.json
+      #     commit_message: update metadata.json
   
