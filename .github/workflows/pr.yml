@@ -1,5 +1,8 @@
 name: New Pull request Open
-on: workflow_dispatch
+on:
+  push:
+    branches: 
+      - testing
 
 jobs:
   make_metadata:
