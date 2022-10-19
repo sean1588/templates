@@ -5,7 +5,7 @@ on:
       - testing
 
 jobs:
-  pblish-metadata:
+  publish-metadata:
     # if: github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
     steps:
@@ -13,16 +13,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.x"
+      
       - name: Check out branch
         uses: actions/checkout@v3
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
+      
       - name: Build metadata
         run: |
           make metadata
+      
       - name: Publish metadata.json file
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: "dist/metadata.json"
+          file_pattern: dist/metadata.json
           commit_message: update dist/metadata.json
   
