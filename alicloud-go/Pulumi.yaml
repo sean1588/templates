@@ -2,7 +2,7 @@ name: ${PROJECT}
 description: ${DESCRIPTION}
 runtime: go
 template:
-  description: A test minimal AliCloud Go Pulumi program
+  description: A minimal AliCloud Go Pulumi program
   config:
     alicloud:region:
       description: The AliCloud region to deploy into
